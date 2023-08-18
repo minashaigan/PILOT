@@ -311,8 +311,7 @@ pl.tl.results_gene_cluster_differentiation(cluster_name='Myofib').head(10)
 </table>
 </div>
 
-Plots of  genes are saved at XXX. We can also vizualise specfici genes, for example the ones discussed in PILOT manuscript (COL1A2, DCN and EXT1). 
-In the plot, the orange line indicates the fit in the target cell type (shown as orange lines) compared to other cell types (represented by grey lines).
+Plots of genes are saved at 'plots_gene_cluster_differentiation' folder. We can also vizualise specfici genes, for example the ones discussed in PILOT manuscript (COL1A2, DCN and EXT1). In the plot, the orange line indicates the fit in the target cell type (shown as orange lines) compared to other cell types (represented by grey lines).
 
 
 ```python
