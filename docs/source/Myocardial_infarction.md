@@ -142,9 +142,9 @@ for cell in adata.uns['cellnames']:
 
 ##### Cluster Specific Marker Changes:
 <div class="alert alert-block alert-info"> 
-The previous test, only finds genes with significant changes over time for a given cell type. However, it does not consider if a similar pattern and expression values are found in other clusters. To test this, we use a Wald test that compares the fit of the gene in the cluster vs. the fit of the gene in other clusters.
+The previous test, only finds genes with significant changes over time for a given cell type. However, it does not consider if a similar pattern and expression values are found in other clusters. To further select genes, we use a Wald test that compares the fit of the gene in the cluster vs. the fit of the gene in other clusters. 
 
-The code snippet below emphasizes genes associated with ‘healthy CM’ and ‘Myofib’. Results are saved in ‘gene_clusters_stats_extend.csv’. You can also see the plots of significant marker genes at “plots_gene_cluster_differentiation”. There, the orange line indicates the fit in the target cell type (shown as orange lines) compared to other cell types (represented by grey lines) 
+In the code below, we consider top genes (regarding the regression fit) for two interesting cell types discussed in the manuscript (‘healthy CM’ and ‘Myofib’). 
 </div>
 
 
@@ -154,10 +154,10 @@ pl.tl.gene_cluster_differentiation(cellnames=['healthy_CM','Myofib'],number_gene
 
     
 
+Test results are saved in ‘gene_clusters_stats_extend.csv’ and plots are saved at “plots_gene_cluster_differentiation”. To find a final list of genes, we only consider genes with a fold change higher than 0.5, i.e. genes which expression is increased in the cluster at hand; and we sort the genes based on the Wald test p-value. These can be seen bellow. 
 
-##### Exploring the results for a specific cell type :
-<div class="alert alert-block alert-info"> 
-For example, if we want to find the same myofibroblast genes as reported in the manuscript, we can do the following. To assist you in exploring the results, we offer a function called ‘results_gene_cluster_differentiation’. This function enables you to sort the results according to your preferences. For instance, if you’re interested in obtaining genes related to ‘Myofib’, you can use the function to first filter genes with larger FC than 0.5 and then sort the results based on p-values. This allows you to gain insights into the most relevant genes for your specific analysis.
+
+
 </div>
 
 
@@ -311,7 +311,8 @@ pl.tl.results_gene_cluster_differentiation(cluster_name='Myofib').head(10)
 </table>
 </div>
 
-
+Plots of  genes are saved at XXX. We can also vizualise specfici genes, for example the ones discussed in PILOT manuscript (COL1A2, DCN and EXT1). 
+In the plot, the orange line indicates the fit in the target cell type (shown as orange lines) compared to other cell types (represented by grey lines).
 
 
 ```python
@@ -349,7 +350,9 @@ pl.tl.exploring_specific_genes(cluster_name='Myofib',gene_list=['COL1A2','DCN','
 
 
 <div class="alert alert-block alert-info"> 
-The same criteria for healthy_CM cell type.
+
+We can repeate the same analysis for healthy_CM cell type by using the following commands. 
+
 </div>
 
 
