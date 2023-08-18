@@ -320,29 +320,6 @@ pl.tl.exploring_specific_genes(cluster_name='Myofib',gene_list=['COL1A2','DCN','
 ```
 
 
-    <Figure size 6400x5600 with 0 Axes>
-
-
-
-    <Figure size 6400x5600 with 0 Axes>
-
-
-
-    <Figure size 6400x5600 with 0 Axes>
-
-
-
-    <Figure size 6400x5600 with 0 Axes>
-
-
-
-    <Figure size 6400x5600 with 0 Axes>
-
-
-
-    <Figure size 6400x5600 with 0 Axes>
-
-
 
     
 ![png](Myocardial_infarction_files/Myocardial_infarction_22_6.png)
