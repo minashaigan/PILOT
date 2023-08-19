@@ -142,7 +142,8 @@ for cell in adata.uns['cellnames']:
 
 ##### Cluster Specific Marker Changes:
 <div class="alert alert-block alert-info"> 
-The previous test, only finds genes with significant changes over time for a given cell type. However, it does not consider if a similar pattern and expression values are found in other clusters. To further select genes, we use a Wald test that compares the fit of the gene in the cluster vs. the fit of the gene in other clusters. 
+The previous test, only finds genes with significant changes over time for a given cell type. However, it does not consider if a gene is specific to that cluster compared to others.
+To further select genes, we use a Wald test that compares the fit of the gene in the cluster vs. the fit of the gene in other clusters. 
 
 In the code below, we consider top genes (regarding the regression fit) for two interesting cell types discussed in the manuscript (‘healthy CM’ and ‘Myofib’). 
 </div>
